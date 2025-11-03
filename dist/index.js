@@ -49,7 +49,7 @@ exports.genSVGURL = genSVGURL;
 const node_buffer_1 = __nccwpck_require__(4573);
 const core = __importStar(__nccwpck_require__(6966));
 const github = __importStar(__nccwpck_require__(4903));
-const axios_1 = __importDefault(__nccwpck_require__(6977));
+const axios_1 = __importDefault(__nccwpck_require__(7786));
 const MARK = {
     START: "<!--START_SECTION:rust-thanks-card-->",
     END: "<!--END_SECTION:rust-thanks-card-->",
@@ -36453,11 +36453,11 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 6977:
+/***/ 7786:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
-/*! Axios v1.13.0 Copyright (c) 2025 Matt Zabriskie and contributors */
+/*! Axios v1.13.1 Copyright (c) 2025 Matt Zabriskie and contributors */
 
 
 const FormData$1 = __nccwpck_require__(6842);
@@ -38617,7 +38617,7 @@ function buildFullPath(baseURL, requestedURL, allowAbsoluteUrls) {
   return requestedURL;
 }
 
-const VERSION = "1.13.0";
+const VERSION = "1.13.1";
 
 function parseProtocol(url) {
   const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
@@ -39893,7 +39893,7 @@ const httpAdapter = isHttpAdapterSupported && function httpAdapter(config) {
 
       if (responseType === 'stream') {
         response.data = responseStream;
-        settle(resolve, abort, response);
+        settle(resolve, reject, response);
       } else {
         const responseBuffer = [];
         let totalResponseBytes = 0;
